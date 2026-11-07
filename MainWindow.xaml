@@ -1,0 +1,96 @@
+<!-- CodeSource2Txt/MainWindow.xaml -->
+<Window x:Class="CodeSource2Txt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Concaténation de codes source"
+        Width="900"
+        Height="650"
+        MinWidth="700"
+        MinHeight="500"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="140"/>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBlock Grid.Row="1"
+               Grid.ColumnSpan="2"
+               Text="Dossier du projet source :"
+               FontWeight="SemiBold"
+               Margin="0,0,0,5"/>
+
+        <TextBox x:Name="TxtSource"
+             Grid.Row="2"
+             Grid.Column="0"
+             Height="32"
+             VerticalContentAlignment="Center"
+             IsReadOnly="True"
+             Margin="0,0,10,0"/>
+
+        <Button Grid.Row="2"
+            Grid.Column="1"
+            Content="Parcourir..."
+            Height="32"
+            Click="ChoisirSource_Click"
+            Margin="0,0,0,0"/>
+
+        <GroupBox Grid.Row="3"
+              Grid.ColumnSpan="2"
+              Header="Journal de l'opération"
+              Margin="0,10,0,15">
+
+            <TextBox x:Name="TxtJournal"
+                 Padding="10"
+                 IsReadOnly="True"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalScrollBarVisibility="Auto"
+                 Background="#FFF7F7F7"
+                 BorderThickness="0"/>
+        </GroupBox>
+
+        <ProgressBar x:Name="Progression"
+                 Grid.Row="4"
+                 Grid.ColumnSpan="2"
+                 Height="24"
+                 Minimum="0"
+                 Margin="0,0,0,8"/>
+
+        <StackPanel Grid.Row="5"
+                Grid.ColumnSpan="2"
+                Orientation="Horizontal"
+                HorizontalAlignment="Center">
+
+            <Button x:Name="BtnConcatener"
+                Content="Concaténer"
+                Width="230"
+                Height="42"
+                Margin="5"
+                Click="Concatener_Click"/>
+
+            <Button x:Name="BtnOuvrirDossier"
+                Content="Ouvrir le dossier"
+                Width="230"
+                Height="42"
+                Margin="5"
+                Click="OuvrirDossier_Click"
+                IsEnabled="False"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Window>

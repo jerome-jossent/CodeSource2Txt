@@ -1,0 +1,15 @@
+<!-- CodeSource2Txt/CodeSource2Txt.csproj -->
+<Project Sdk="Microsoft.NET.Sdk"> <PropertyGroup>
+<OutputType>WinExe</OutputType>
+<TargetFramework>net8.0-windows</TargetFramework>
+
+<UseWPF>true</UseWPF>
+<UseWindowsForms>true</UseWindowsForms>
+
+<Nullable>enable</Nullable>
+<ImplicitUsings>enable</ImplicitUsings>
+
+<AssemblyName>CodeSource2Txt</AssemblyName>
+<RootNamespace>CodeSource2Txt</RootNamespace>
+
+</PropertyGroup></Project>
