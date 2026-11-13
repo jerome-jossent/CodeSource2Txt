@@ -11,5 +11,8 @@
 
 <AssemblyName>CodeSource2Txt</AssemblyName>
 <RootNamespace>CodeSource2Txt</RootNamespace>
+<ApplicationIcon>concatener_texte.ico</ApplicationIcon>
 
-</PropertyGroup></Project>
+</PropertyGroup> <ItemGroup>
+  <Content Include="concatener_texte.ico" />
+</ItemGroup></Project>
